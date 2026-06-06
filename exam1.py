@@ -61,7 +61,7 @@ class Shop:
         print(f"Cost Price: {self.costPrice}")
         print(f"Profit: {self.Profit()}")
 
-# Example
+
 item = Shop("Keyboard", 800, 500)
 item.Display()
 import numpy as np
@@ -91,7 +91,7 @@ plt.show()
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Function to plot a phasor diagram for Instrument Transformer (CT/PT)
+
 def plot_phasor_diagram():
     fig, ax = plt.subplots(figsize=(8, 8))
     ax.set_xlim(-1.5, 1.5)
@@ -99,13 +99,13 @@ def plot_phasor_diagram():
     ax.set_aspect('equal')
     ax.grid(True, which='both')
 
-    # Phasor lengths and angles (radians)
+   
     I_p_mag = 1.0
     I_s_mag = 0.9
     V_p_mag = 1.0
     V_s_mag = 0.95
 
-    # Angle differences (CT typically has lagging secondary current)
+  
     I_p_angle = 0
     I_s_angle = -10 * np.pi / 180  # CT secondary current lags
     V_p_angle = 0
@@ -117,13 +117,12 @@ def plot_phasor_diagram():
     V_p = [V_p_mag * np.cos(V_p_angle), V_p_mag * np.sin(V_p_angle)]
     V_s = [V_s_mag * np.cos(V_s_angle), V_s_mag * np.sin(V_s_angle)]
 
-    # Draw phasors
-    ax.arrow(0, 0, *I_p, head_width=0.05, color='blue', label='Primary Current $I_p$')
+ax.arrow(0, 0, *I_p, head_width=0.05, color='blue', label='Primary Current $I_p$')
     ax.arrow(0, 0, *I_s, head_width=0.05, color='red', label='Secondary Current $I_s$')
     ax.arrow(0, 0, *V_p, head_width=0.05, color='green', label='Primary Voltage $V_p$')
     ax.arrow(0, 0, *V_s, head_width=0.05, color='orange', label='Secondary Voltage $V_s$')
 
-    # Labeling
+  
     ax.text(*I_p, '$I_p$', fontsize=12, color='blue', ha='left')
     ax.text(*I_s, '$I_s$', fontsize=12, color='red', ha='right')
     ax.text(*V_p, '$V_p$', fontsize=12, color='green', ha='left')
